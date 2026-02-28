@@ -8,7 +8,7 @@ interface HeaderProps {
 
 export default function Header({ menuItem }: HeaderProps) {
   return (
-    <header className="fixed top-0 left-0 w-full">
+    <header className="fixed top-0 left-0 w-full z-50 bg-yellow-200/90 backdrop-blur-sm px-8">
       <div className="flex bg-yellow-200 gap-12 items-center justify-between ">
         <div>
           <h1>LOGO</h1>
