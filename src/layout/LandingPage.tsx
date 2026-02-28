@@ -1,3 +1,5 @@
+
+
 export default function LandingPage() {
   return (
     <main className="min-h-screen bg-white overflow-hidden">
@@ -13,7 +15,7 @@ export default function LandingPage() {
         </div>
 
         {/* Overlap content */}
-        <div className="relative z-10 w-full flex justify-between items-center">
+        <div className="relative z-10 w-full flex justify-around gap-10 items-center">
           <div className="flex items-center gap-8">
             <img
               className="w-48 h-48 object-contain "

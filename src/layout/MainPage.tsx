@@ -1,3 +1,4 @@
+import ContentPage from "./ContentPage";
 import Header from "./Header";
 import LandingPage from "./LandingPage";
 
@@ -15,6 +16,7 @@ export default function MainPage() {
       <div className="min-h-screen bg-white">
         <Header menuItem={navMenuItems}></Header>
         <LandingPage></LandingPage>
+        <ContentPage></ContentPage>
       </div>
     </>
   );
