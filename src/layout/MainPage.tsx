@@ -1,4 +1,5 @@
 import Header from "./Header";
+import LandingPage from "./LandingPage";
 
 export default function MainPage() {
   const navMenuItems = [
@@ -11,7 +12,10 @@ export default function MainPage() {
 
   return (
     <>
-      <Header menuItem={navMenuItems}></Header>
+      <div className="min-h-screen bg-white">
+        <Header menuItem={navMenuItems}></Header>
+        <LandingPage></LandingPage>
+      </div>
     </>
   );
 }
