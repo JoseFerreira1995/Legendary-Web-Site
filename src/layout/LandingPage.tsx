@@ -21,11 +21,6 @@ export default function LandingPage() {
             <MainLogo></MainLogo>
           </CanvasWrapper>
 
-          {/* <img
-            src="/public/assets/Adobe Express - file.png"
-            className="h-[90%] object-contain"
-            alt="Award Trophy"
-          /> */}
         </div>
 
         {/* Overlap content */}
@@ -36,7 +31,7 @@ export default function LandingPage() {
               src="/assets/Adobe Express_Main - file.png"
               alt="Green Logo"
             />
-            <div className="text-left font-nohemi leading-[0.85] tracking-tighter uppercase">
+            <div className="text-left font-nohemi leading-[0.85] tracking-tighter ">
               <h2 className="text-5xl font-bold">beauty</h2>
               <h2 className="text-5xl font-bold">vibe</h2>
               <h2 className="text-5xl">innovation</h2>
