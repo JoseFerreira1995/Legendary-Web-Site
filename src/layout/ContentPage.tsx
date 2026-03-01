@@ -6,7 +6,7 @@ export default function ContentPage() {
       <section className="relative w-full h-screen">
         <div className="flex items-center m-10">
           <div className="flex flex-col justify-center p-8 z-10">
-            <h2>Final Deadline</h2>
+            <h2 className="font-extrabold">Final Deadline</h2>
             <h1>07 April 2026</h1>
             <div className="flex gap-5">
               <p>Jury Panel 2026 Edition</p>
@@ -28,7 +28,7 @@ export default function ContentPage() {
           </div>
         </div>
         {/* Z-*/}
-        <div className="w-56 m-5 z-10">
+        <div className="w-56 m-5 ml-10 z-10">
           <h3 className="text-2xl">
             It’s in the balance between science and creativity where true beauty
             really innovates.
