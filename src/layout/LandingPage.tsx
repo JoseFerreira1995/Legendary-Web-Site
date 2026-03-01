@@ -1,4 +1,6 @@
-
+import { Environment, OrbitControls } from "@react-three/drei";
+import CanvasWrapper from "../three/CanvasWrapper";
+import MainLogo from "../three/objects/MainLogo";
 
 export default function LandingPage() {
   return (
@@ -6,33 +8,42 @@ export default function LandingPage() {
       {/* Main container */}
       <section className="relative w-full h-screen flex items-center justify-center px-10">
         {/* 3d image ) */}
-        <div className="absolute inset-0 flex items-center justify-end z-0">
-          <img
-            src="/public/assets/Adobe Express - file.png"
-            className="h-[90%] object-contain"
-            alt="Award Trophy"
-          />
+        <div className="absolute mt-20 inset-0 flex items-center justify-end z-1 ml-50">
+          <CanvasWrapper>
+            <OrbitControls makeDefault enableZoom={false} />
+            <ambientLight intensity={0.5} />
+            <Environment preset="city" />
+            <directionalLight
+              color={"#E2F35E"}
+              position={[-10, -4, 6]}
+              intensity={6}
+            />
+            <MainLogo></MainLogo>
+          </CanvasWrapper>
+
         </div>
 
         {/* Overlap content */}
-        <div className="relative z-10 w-full flex justify-around gap-10 items-center">
-          <div className="flex items-center gap-8">
+        <div className="relative z-0 w-full flex justify-between gap-10 items-center pr-40 ">
+          <div className=" flex items-center gap-5">
             <img
-              className="w-48 h-48 object-contain "
+              className="w-100 h-100 object-contain "
               src="/assets/Adobe Express_Main - file.png"
               alt="Green Logo"
             />
-            <div className="text-left font-nohemi leading-[0.85] tracking-tighter uppercase">
-              <h2>beauty</h2>
-              <h2>vibe</h2>
-              <h2>innovation</h2>
-              <h2>awards</h2>
+            <div className="text-left font-nohemi leading-[0.85] tracking-tighter ">
+              <h2 className="text-5xl font-bold">beauty</h2>
+              <h2 className="text-5xl font-bold">vibe</h2>
+              <h2 className="text-5xl">innovation</h2>
+              <h2 className="text-5xl">awards</h2>
             </div>
           </div>
 
-          <div className="relative flex justify-end-safe">
-            <button className="bg-black text-[#d9ff00] px-8 py-6 rounded-[40px] font-bold text-xl hover:scale-105 transition-transform shadow-xl flex items-center justify-center">
-              submit now
+          <div className="">
+            <button className="bg-black w-64 h-16 px-8 py-6 rounded-[40px] z-50 hover:scale-105 transition-transform shadow-xl flex items-center justify-center">
+              <span className=" text-[#d9ff00] text-3xl font-bold">
+                submit now
+              </span>
             </button>
           </div>
         </div>

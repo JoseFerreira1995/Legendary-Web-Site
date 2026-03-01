@@ -3,6 +3,8 @@ import Header from "./Header";
 import LandingPage from "./LandingPage";
 
 export default function MainPage() {
+
+  // Criar ficheiro para colocar todas as const ou props
   const navMenuItems = [
     { label: "Project Submission" },
     { label: "Award Manual" },
