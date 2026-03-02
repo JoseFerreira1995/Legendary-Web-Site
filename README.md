@@ -3,6 +3,9 @@
 ## Project Overview
 My WebApp is a modern web application built with TypeScript and Vite. It features a modular architecture, reusable components, and interactive graphical elements. The project leverages Three.js for 3D rendering and includes a variety of assets such as images, fonts, and 3D models to create a visually appealing user experience.
 
+<img width="1680" height="938" alt="Captura de ecrã 2026-03-02, às 20 05 09" src="https://github.com/user-attachments/assets/b42e7cf3-40db-4538-a10c-3a646049b877" />
+
+
 ### Key Features
 - Modular and reusable components for scalability.
 - Integration with Three.js for 3D graphics.
