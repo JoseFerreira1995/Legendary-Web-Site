@@ -1,9 +1,9 @@
-import ContentPage from "./ContentPage";
-import Header from "./Header";
-import LandingPage from "./LandingPage";
+import Header from "../layout/Header";
+import LandingPage from "../features/LandingPage";
+import ThrophySection from "../features/TrophySection";
+import ShowcaseSection from "../features/ShowcaseSection";
 
 export default function MainPage() {
-  // Criar ficheiro para colocar todas as const ou props
   const navMenuItems = [
     { label: "Project Submission" },
     { label: "Award Manual" },
@@ -17,7 +17,8 @@ export default function MainPage() {
       <div className="min-h-screen bg-white">
         <Header menuItem={navMenuItems}></Header>
         <LandingPage></LandingPage>
-        <ContentPage></ContentPage>
+        <ThrophySection></ThrophySection>
+        <ShowcaseSection></ShowcaseSection>
       </div>
     </>
   );

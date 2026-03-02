@@ -27,7 +27,7 @@ export default function Header({ menuItem }: HeaderProps) {
       animate={{
         y: 0,
         backgroundColor: scrolled
-          ? "rgba(226, 243, 94, 0.6)" 
+          ? "rgba(226, 243, 94, 0.6)"
           : "rgba(226, 243, 94, 1)",
       }}
       className="fixed top-0 left-0 right-0 z-50 px-4 md:px-10 py-2 transition-all duration-300 backdrop-blur-md"
@@ -51,7 +51,6 @@ export default function Header({ menuItem }: HeaderProps) {
           ))}
         </div>
 
-        {/* Right: Main Logo & Mobile Toggle */}
         <div className="flex items-center gap-4">
           <img
             className="w-32 md:w-40 lg:w-48 h-auto object-contain"
@@ -59,12 +58,10 @@ export default function Header({ menuItem }: HeaderProps) {
             alt="Main Logo"
           />
 
-          {/* Mobile Menu Button (Visible only on mobile/tablet) */}
           <button
             className="lg:hidden p-2 text-white bg-black"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {/* Simple Dynamic Hamburger/X icon */}
             <div className="w-6 h-5 relative flex flex-col justify-between">
               <span
                 className={`w-full h-0.5 bg-white transition-all ${
@@ -86,7 +83,6 @@ export default function Header({ menuItem }: HeaderProps) {
         </div>
       </div>
 
-      {/* Mobile Sidebar/Dropdown */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
