@@ -17,6 +17,7 @@ export default function LandingPage() {
               color={"#E2F35E"}
               position={[-10, -4, 6]}
               intensity={6}
+
             />
             <MainLogo></MainLogo>
           </CanvasWrapper>
