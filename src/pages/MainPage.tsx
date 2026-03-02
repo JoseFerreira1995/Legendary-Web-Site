@@ -3,14 +3,14 @@ import LandingPage from "../features/LandingPage";
 import ThrophySection from "../features/TrophySection";
 import ShowcaseSection from "../features/ShowcaseSection";
 
+const navMenuItems = [
+  { label: "Project Submission" },
+  { label: "Award Manual" },
+  { label: "Jury Panel" },
+  { label: "Gallery" },
+  { label: "Contacts" },
+];
 export default function MainPage() {
-  const navMenuItems = [
-    { label: "Project Submission" },
-    { label: "Award Manual" },
-    { label: "Jury Panel" },
-    { label: "Gallery" },
-    { label: "Contacts" },
-  ];
 
   return (
     <>

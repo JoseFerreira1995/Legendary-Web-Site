@@ -3,6 +3,23 @@ import { useRef } from "react";
 import Anchors from "../components/Anchors";
 import Button from "../components/Button";
 
+/**
+ * TrophySection component represents a visually engaging section of a webpage
+ * that highlights an event or milestone, such as the "Beautyvibe Innovation Awards 2026".
+ * 
+ * This component includes:
+ * - A header with a deadline date and related links.
+ * - Animated visuals, including a glowing effect and a trophy image that moves
+ *   based on the scroll position.
+ * - A call-to-action section encouraging users to participate in the event.
+ * 
+ * The animations are powered by Framer Motion, utilizing `useScroll` and `useTransform`
+ * hooks to create dynamic effects based on the user's scroll progress.
+ * 
+ */
+
+
+
 export default function ThrophySection() {
   const containerRef = useRef(null);
 

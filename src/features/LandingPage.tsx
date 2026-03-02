@@ -3,6 +3,27 @@ import CanvasWrapper from "../three/CanvasWrapper";
 import MainLogo from "../three/objects/MainLogo";
 import Button from "../components/Button";
 
+/**
+ * The `LandingPage` component represents the main landing page of the application.
+ * It is designed to be visually appealing and responsive, with a combination of
+ * text, images, and 3D elements. The layout adapts for different screen sizes
+ * using Tailwind CSS classes.
+ *
+ *
+ * @dependencies
+ * - `CanvasWrapper`: A wrapper for the 3D canvas.
+ * - `OrbitControls`: Enables orbit controls for the 3D scene.
+ * - `Environment`: Adds environmental lighting to the 3D scene.
+ * - `MainLogo`: A 3D model of the main logo.
+ * - `Button`: A reusable button component.
+ *
+ * @styles
+ * - Tailwind CSS classes are used extensively for layout, spacing, and responsiveness.
+ * - The `pointer-events-none` class is applied to prevent interaction with certain elements.
+ *
+ *
+ * 
+ */
 export default function LandingPage() {
   return (
     <main className="min-h-screen bg-white overflow-hidden">

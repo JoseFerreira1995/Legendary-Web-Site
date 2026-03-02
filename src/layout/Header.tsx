@@ -9,6 +9,30 @@ interface HeaderProps {
   menuItem: NavItems[];
 }
 
+/**
+ * The `Header` component represents a responsive navigation bar with a logo, menu items, and a toggleable mobile menu.
+ * It dynamically changes its background color when the user scrolls down the page.
+ *
+ *
+ */
+
+/**
+ * Header component that renders a responsive navigation bar with a logo, menu items,
+ * and a toggleable mobile menu. The navigation bar changes its background color
+ * when the user scrolls down the page.
+ *
+ * @param {HeaderProps} props - The props for the Header component.
+ * @param {Array<{ label: string }>} props.menuItem - An array of menu items to display in the navigation bar.
+ *
+ * @returns {JSX.Element} The rendered Header component.
+ *
+ * @remarks
+ * - The navigation bar uses `framer-motion` for animations.
+ * - The background color of the navigation bar changes based on the scroll position.
+ * - On larger screens, the menu items are displayed inline. On smaller screens, a toggleable menu is displayed.
+ *
+ */
+
 export default function Header({ menuItem }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
