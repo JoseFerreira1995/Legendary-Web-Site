@@ -1,7 +1,22 @@
+import { motion, useScroll, useTransform } from "motion/react";
 import Anchors from "../components/Anchors";
 import Card from "../components/Card";
+import { useRef } from "react";
+import Button from "../components/Button";
 
 export default function ContentPage() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "center center"],
+  });
+
+  const clipPath = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["inset(0% 80% 0% 50%)", "inset(0% 0% 0% 0%)"]
+  );
+
   return (
     <>
       <section className="relative w-full h-screen">
@@ -57,9 +72,9 @@ export default function ContentPage() {
             <strong> Beautyvibe Innovation Awards 2026</strong> the first
             innovation award in Portugal dedicated to the cosmetics industry.
           </p>
-          <button className="bg-black text-[#d9ff00] m-4 px-8 py-6 rounded-[40px] font-bold text-xl hover:scale-105 transition-transform shadow-xl flex items-center justify-center">
-            submit now
-          </button>
+          <div className="m-2">
+            <Button title="enter now"></Button>
+          </div>
         </div>
       </section>
       <section className="relative w-full h-screen mt-80">
@@ -84,34 +99,47 @@ export default function ContentPage() {
             <Anchors description="Learn more about prizes and benifits"></Anchors>
           </div>
         </div>
-        <div className="flex flex-col p-10 z-10 w-100 ml-40">
-          <h2 className="text-2xl font-bold">We are looking for</h2>
-          <p className="text-4xl">Bold, Sustainable and Visionary ideas.</p>
-        </div>
+        <motion.div
+          ref={ref}
+          className="relative min-h-screen overflow-hidden bg"
+          style={{ clipPath }}
+        >
+          <div className="flex flex-col p-10 z-10 w-100 ml-40">
+            <h2 className="text-2xl font-bold">We are looking for</h2>
+            <p className="text-4xl">Bold, Sustainable and Visionary ideas.</p>
+          </div>
 
-        <div className="absolute inset-0 flex items-center justify-end z-0 mt-70 overflow-hidden">
-          <img
-            src="/public/assets/Adobe Express_Main - file.png"
-            className="w-560 h-300 -rotate-x-60 rotate-y-10 -rotate-z-10 object-fill"
-          ></img>
-        </div>
-        <div className="flex flex-col items-center ">
-          <div className="flex">
-            <Card title="Packaging Innovation"></Card>
-            <Card imageSrc="/assets/01.png" title="Packaging Innovation"></Card>
-            <Card imageSrc="/assets/03.png" title="Packaging Innovation"></Card>
-            <Card
-              imageSrc="/assets/Gemini_Generated_Image_jvlj1ljvlj1ljvlj.png"
-              title="Packaging Innovation"
-            ></Card>
-            <Card imageSrc="/assets/02.png" title="Packaging Innovation"></Card>
+          <div className="absolute inset-0 flex items-center justify-end z-0 mt-70 overflow-hidden">
+            <img
+              src="/public/assets/Adobe Express_Main - file.png"
+              className="w-560 h-300 -rotate-x-60 rotate-y-10 -rotate-z-10 object-fill"
+            ></img>
           </div>
-          <div className="z-50">
-            <button className="bg-black text-[#d9ff00] m-2 px-8 py-6 rounded-[40px] font-bold text-xl hover:scale-105 transition-transform shadow-xl flex items-center justify-center ">
-              submit now
-            </button>
+          <div className="flex flex-col items-center ">
+            <div className="flex">
+              <Card title="Packaging Innovation"></Card>
+              <Card
+                imageSrc="/assets/01.png"
+                title="Packaging Innovation"
+              ></Card>
+              <Card
+                imageSrc="/assets/03.png"
+                title="Packaging Innovation"
+              ></Card>
+              <Card
+                imageSrc="/assets/Gemini_Generated_Image_jvlj1ljvlj1ljvlj.png"
+                title="Packaging Innovation"
+              ></Card>
+              <Card
+                imageSrc="/assets/02.png"
+                title="Packaging Innovation"
+              ></Card>
+            </div>
+            <div className="z-50">
+              <Button title="submit your project"></Button>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );

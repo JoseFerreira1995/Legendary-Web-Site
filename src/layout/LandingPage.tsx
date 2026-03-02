@@ -1,6 +1,7 @@
 import { Environment, OrbitControls } from "@react-three/drei";
 import CanvasWrapper from "../three/CanvasWrapper";
 import MainLogo from "../three/objects/MainLogo";
+import Button from "../components/Button";
 
 export default function LandingPage() {
   return (
@@ -11,17 +12,15 @@ export default function LandingPage() {
         <div className="absolute mt-20 inset-0 flex items-center justify-end z-1 ml-50">
           <CanvasWrapper>
             <OrbitControls makeDefault enableZoom={false} />
-            <ambientLight intensity={0.5} />
+            <ambientLight intensity={-0.5} />
             <Environment preset="city" />
             <directionalLight
               color={"#E2F35E"}
               position={[-10, -4, 6]}
-              intensity={6}
-
+              intensity={10}
             />
             <MainLogo></MainLogo>
           </CanvasWrapper>
-
         </div>
 
         {/* Overlap content */}
@@ -40,19 +39,15 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <div className="">
-            <button className="bg-black w-64 h-16 px-8 py-6 rounded-[40px] z-50 hover:scale-105 transition-transform shadow-xl flex items-center justify-center">
-              <span className=" text-[#d9ff00] text-3xl font-bold">
-                submit now
-              </span>
-            </button>
+          <div >
+            <Button title="submit now"></Button>
           </div>
         </div>
 
         {/* Landing Page Footer */}
         <div className="absolute bottom-10 w-full px-10 flex justify-between items-end text-[10px] font-bold uppercase">
           <p>2026 Edition</p>
-          <img src="/assets/colep-logo.png" className="h-8" alt="Colep Logo" />
+          <img src="/assets/ColepLogo.png" className="h-8" alt="Colep Logo" />
         </div>
       </section>
     </main>
