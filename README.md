@@ -1,73 +1,87 @@
-# React + TypeScript + Vite
+# My WebApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+My WebApp is a modern web application built with TypeScript and Vite. It features a modular architecture, reusable components, and interactive graphical elements. The project leverages Three.js for 3D rendering and includes a variety of assets such as images, fonts, and 3D models to create a visually appealing user experience.
 
-Currently, two official plugins are available:
+### Key Features
+- Modular and reusable components for scalability.
+- Integration with Three.js for 3D graphics.
+- Organized folder structure for maintainability.
+- Custom fonts and assets for a unique design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation Guide
 
-## React Compiler
+Follow these steps to set up and run the project locally:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
+- **Node.js**: Ensure you have Node.js installed. You can download it from [Node.js official website](https://nodejs.org/).
+- **Package Manager**: npm (comes with Node.js) or yarn.
 
-## Expanding the ESLint configuration
+### Steps
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Clone the Repository**:
+   ```bash
+   git clone <repository-url>
+   cd my-webapp
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3. **Run the Development Server**:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4. **Open the Application**:
+   Open your browser and navigate to `http://localhost:5173` (default Vite port).
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+5. **Build for Production**:
+   To create an optimized production build, run:
+   ```bash
+   npm run build
+   # or
+   yarn build
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+6. **Preview the Production Build**:
+   ```bash
+   npm run preview
+   # or
+   yarn preview
+   ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Libraries and Tools Used
+
+### Core Libraries
+- **TypeScript**: For static typing and improved developer experience.
+- **Vite**: A fast build tool for modern web applications.
+- **Three.js**: For creating and displaying 3D graphics in the browser.
+
+### Additional Tools
+- **ESLint**: For maintaining code quality and consistency.
+- **Prettier**: For code formatting.
+
+### Assets
+- Custom fonts and images are located in the `src/assets/` and `public/assets/` directories.
+
+## Folder Structure
+
+- `src/`: Contains the source code, including components, features, layouts, and pages.
+- `public/`: Contains static assets such as images and 3D models.
+- `tsconfig.json`: TypeScript configuration.
+- `vite.config.ts`: Vite configuration.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute, please fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
