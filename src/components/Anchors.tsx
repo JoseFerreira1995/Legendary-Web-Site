@@ -7,10 +7,11 @@ export default function Anchors({ description }: AnchorProps) {
     <>
       <a
         href="#"
-        className="flex items-center text-2xs gap-2s font-bold border-b-2 border-black pb-1 transition-all hover:gap-4"
+        className=" relative group flex items-center text-2xxs gap-2s font-bold border-b  "
       >
-        <span className="text-black">→</span>
-        <span className=" text-black">{description}</span>
+        <span className="text-black z-10 font-bold ">→</span>
+        <span className=" text-black z-10 font-bold ">{description}</span>
+        <span className="absolute left-0 bottom-0 w-full h-0.5 transition-all bg-[#E2F35E] z-0 group-hover:h-full"></span>
       </a>
     </>
   );

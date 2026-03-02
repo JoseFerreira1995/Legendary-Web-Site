@@ -5,7 +5,7 @@ interface CardProps {
   title: string;
 }
 
-export default function SocialCard({ imageSrc, title }: CardProps) {
+export default function Card({ imageSrc, title }: CardProps) {
   return (
     <div className="group cursor-pointer flex flex-col items-center  rounded-[40px] p-12 w-full z-50 max-w-100 transition-all duration-300 hover:shadow-xl">
       {imageSrc ? (
