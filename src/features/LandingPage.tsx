@@ -31,7 +31,7 @@ export default function LandingPage() {
         <div className="relative z-10 w-full md:w-1/2 flex flex-col justify-center items-center md:items-start pointer-events-none">
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-5 text-center md:text-left pointer-events-auto">
             <img
-              className="w-32 h-32  md:w-64 lg:w-[35vw] lg:scale-500 lg:max-w-137.5 aspect-square object-contain pointer-events-none"
+              className="w-32 h-32  md:w-64 md:scale-300 lg:w-[35vw]  lg:max-w-137.5 aspect-square object-contain pointer-events-none"
               src="/assets/Adobe Express_Main - file.png"
               alt="Green Logo"
             />
