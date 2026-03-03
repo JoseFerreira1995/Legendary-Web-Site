@@ -67,12 +67,28 @@ Follow these steps to set up and run the project locally:
 - **Vite**: A fast build tool for modern web applications.
 - **Three.js**: For creating and displaying 3D graphics in the browser.
 
-### Additional Tools
+### Additional Libraries
+- **React**: For building user interfaces with a component-based architecture.
+- **React-DOM**: For rendering React components in the browser.
+- **@react-three/fiber**: A React renderer for Three.js, enabling declarative 3D scenes.
+- **@react-three/drei**: A collection of helpers for working with Three.js and React.
+- **motion**: For animations and transitions.
+- **tailwindcss**: A utility-first CSS framework for styling.
+- **@tailwindcss/vite**: Integration of Tailwind CSS with Vite.
+
+### Development Tools
 - **ESLint**: For maintaining code quality and consistency.
 - **Prettier**: For code formatting.
+- **@vitejs/plugin-react**: For integrating React with Vite.
 
-### Assets
-- Custom fonts and images are located in the `src/assets/` and `public/assets/` directories.
+### Assets and Styling
+- **CSS**: For styling the application.
+- **Custom Fonts**: Located in `src/assets/fonts/`.
+- **Static Assets**: Images and 3D models located in `public/assets/`.
+
+### Build and Configuration
+- **tsconfig.json**: TypeScript configuration for the project.
+- **vite.config.ts**: Vite configuration for development and production builds.
 
 ## Folder Structure
 
